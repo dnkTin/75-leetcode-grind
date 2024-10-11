@@ -8,6 +8,7 @@ i hold something that really need to find something by creating loop => to do th
 
 
 https://www.geeksforgeeks.org/two-pointers-technique/
+https://www.geeksforgeeks.org/how-does-floyds-slow-and-fast-pointers-approach-work/
 
 Better Approaches – Binary Search and Hashing
 We can use more methods like Binary Search and Hashing to solve this problem (Please refer Two Sum article for details) in better time complexity but Two Pointer Technique is the best solution for this problem that works well for sorted arrays.

@@ -9,3 +9,4 @@ O(2^n) => fibonaci
 #### words[i] and allowed contain only lowercase English letters.
 #### The characters in allowed are distinct.
 
+## edge/special cases.

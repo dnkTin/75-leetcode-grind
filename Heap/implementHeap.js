@@ -61,7 +61,7 @@ function getSuccessor(curr) {
   return curr;
 
 }
-
+/*
 // delete a node in BST
 function delNode(root, x) {
   // There are 3 senarios:
@@ -95,6 +95,36 @@ function delNode(root, x) {
   return root
 }
 
+*/
+
+
+// write function delNode to delete node form BST, input root and key to be deleted
+const delNode = (root, key) => {
+  // base case
+  if (root == null) return root
+  // If key to be searched is in the subtree
+  if (root.key < key) {
+    root.right = delNode(root.right, key)
+  } else if (root.key > key) {
+    root.left = delNode(root.left, key)
+  } else {
+    // If root matches the given key
+    // Case when root has 0 children or only right child
+    if (root.left == null) {
+      return root.right
+    }
+    if (root.right == null) {
+      return root.left
+    }
+
+    // when both children has present
+    let succ = getSuccessor(root)
+    root.key = succ.key
+    root.right = delNode(root.right, succ.key)
+
+  }
+  return root
+}
 
 
 // creating a hard coded tree for keeping the length of the code small

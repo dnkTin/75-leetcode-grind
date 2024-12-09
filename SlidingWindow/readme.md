@@ -1,4 +1,9 @@
+left = 0
+1 gia tri => khi gia tri nay thay doi thi thu hep trai
+
+
 * Number.NEGATIVE_INFINITY
+
 
 * Number.MIN_VALUE
 

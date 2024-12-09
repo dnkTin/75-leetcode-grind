@@ -14,6 +14,7 @@ var deleteMiddle = function(head) {
   let beforeMiddle = head
   let slow = head
   let fast = head
+  // ki thuat slow fast
   while (fast != null && fast.next != null) {
       beforeMiddle = slow
       slow = slow.next

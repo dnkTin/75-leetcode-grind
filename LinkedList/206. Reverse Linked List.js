@@ -11,12 +11,12 @@
  */
 var reverseList = function(head) {
     // create a new linked list from the original one
-    let current = null
+    let prev = null
     while (head) {
         let temp = head.next // hold the rest
-        head.next = current // reverse
-        current = head // update the current
+        head.next = prev // reverse
+        prev = head // update the prev
         head = temp
     }
-    return current
+    return prev
 };

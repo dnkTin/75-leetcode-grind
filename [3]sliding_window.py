@@ -48,6 +48,9 @@ function slidingWindow(arr, k, processWindow):
 windowResult, processWindow function, adding or removing element of array to preserve the condition
 
 """
+from collections import deque
+
+
 class Solution:
   # 187
   def findRepeatedDnaSequences(self, s: str) -> list[str]:
@@ -73,12 +76,13 @@ class Solution:
         """
         def clean_up(i, current_window, nums):
             while current_window and nums[i] >= nums[current_window[-1]]:
-                del current_window[-1]
+                current_window.pop()
+
         
         if len(nums) == 1:
             return nums
         output = []
-        current_window = []
+        current_window = deque()
 
         # iterate over the first w element in nums (initial 1)
         for i in range(k):
@@ -92,9 +96,9 @@ class Solution:
             clean_up(i, current_window, nums)
             # remove the first element of current window if it has fallen out of the current window
             if current_window and current_window[0] <= (i - k):
-                del current_window[0]
-            output.append(nums[current_window[0]])
+                current_window.popleft()
             current_window.append(i)
+            output.append(nums[current_window[0]])
         return output
 a = Solution().maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3)
 print(a)

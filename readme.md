@@ -10,3 +10,12 @@ O(2^n) => fibonaci
 #### The characters in allowed are distinct.
 
 ## edge/special cases.
+
+
+1. [prefix file]: [sliding window] - 
+                  [dp]
+        a.having the brain storming of the solution
+        b. the solution
+        c. run for some example
+2. mark the solution (only) in one file
+

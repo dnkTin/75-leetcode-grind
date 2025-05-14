@@ -13,3 +13,10 @@ while left < right
 ```
 
 #binary search
+
+
+dfs hay bfs sẽ có hai dạng (841)
+một là kiểu queue, pop ra
+dạng hai là kiểu cycle, dùng đệ quy
+
+BFS is an algorithm for traversing or searching a graph. It traverses in a level-wise manner, i.e., all the nodes at the present level (say l) are explored before moving on to the nodes at the next level (l + 1). BFS is implemented with a queue.

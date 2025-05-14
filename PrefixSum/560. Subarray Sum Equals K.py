@@ -18,7 +18,7 @@ var subarraySum = function(nums, k) {
   return count;
 };
 """
-
+"""
 nums = [1,2,3], k = 3
 
 count = 2
@@ -27,6 +27,8 @@ h = {1: 1, 3: 1, 6: 1}
 num = 2
 O(n)
 O(n)
+"""
+
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
         count = curr_sum = 0

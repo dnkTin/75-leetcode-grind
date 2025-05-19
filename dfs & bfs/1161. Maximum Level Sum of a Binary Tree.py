@@ -4,35 +4,28 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+# using BFS
+"""
+             0 
+         /       \
+         
+"""
+
 class Solution:
     def maxLevelSum(self, root: Optional[TreeNode]) -> int:
-        """
-               1
-              / \
-             7    0
-           /   \     \
-          7     -8     \
-        /   \    /  \    9
-       -5   4   2    5  / \ 
-                        12  18
-        queue add all node, => have max, pop queue?
-        level 3  7 + -8 + 9
-        level 4 -5 + 4 + 2 + 5 + 12 + 18
-        def dfs(node):
-            return node
-        """
-        max_sum, ans, level  = float('-inf'), 0, 0
+        max_sum, ans, level = float("-inf"), 0, 0
         q = collections.deque()
         q.append(root)
-        while q:
+
+        while q: # O(1)
             level += 1
             sum_at_current_level = 0
-            # iterate over all the node in the current level
-            length = len(q) # iterate throught the current length first
-            for _ in range(length):
+            # iterate over all the nodes in the current level
+            for _ in range(len(q)): # O(n) it takes all nodes
                 node = q.popleft()
                 sum_at_current_level += node.val
-
+                # add node of the next level to q because we use for loop with previous len q
                 if node.left:
                     q.append(node.left)
                 if node.right:
@@ -40,4 +33,27 @@ class Solution:
             if max_sum < sum_at_current_level:
                 max_sum, ans = sum_at_current_level, level
         return ans
-            
+
+#DFS
+
+class Solution:
+    def dfs(self, node: Optional[TreeNode], level: int, sum_of_nodes_at_level: List[int]) -> None:
+        if node is None:
+            return
+        if len(sum_of_nodes_at_level) == level:
+            sum_of_nodes_at_level.append(node.val)
+        else:
+            sum_of_nodes_at_level[level] += node.val
+        self.dfs(node.left, level + 1, sum_of_nodes_at_level)
+        self.dfs(node.right, level + 1, sum_of_nodes_at_level)
+    def maxLevelSum(self, root: Optional[TreeNode]) -> int:
+        sum_of_nodes_at_level = []
+        self.dfs(root, 0, sum_of_nodes_at_level)
+        max_sum = float("-inf")
+        ans = 0
+        for i in range(len(sum_of_nodes_at_level)):
+            if max_sum < sum_of_nodes_at_level[i]:
+                max_sum, ans = sum_of_nodes_at_level[i], i + 1
+        return ans
+        
+        

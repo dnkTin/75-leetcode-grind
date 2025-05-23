@@ -1,1 +1,17 @@
-[19/5/2025] 102. Binary Tree Level Order Traversal
+[19/5/2025] [BST] 102. Binary Tree Level Order Traversal
+[19/5/2025] [BST] 199. Binary Tree Right Side View (again similar to problems 102)
+[20/5/2025] [BST] 236. Lowest Common Ancestor of a Binary Tree (DFS)
+[20/5/2025] [BST] [20/5/2025] 235. Lowest Common Ancestor of a Binary Search Tree
+[20/5/2025] [BST] 98. Validate Binary Search Tree (BST)
+[22/5/2025] [BST] 1644. Lowest Common Ancestor of a Binary Tree II - same with 235 but we need to check is exist
+[22/5/2025] [BST] 1676. Lowest Common Ancestor of a Binary Tree IV
+[22/5/2025] [BST] [GOOD] [Hashtable] 1650. Lowest Common Ancestor of a Binary Tree III - loop circle - the same as linked list technique {root: None, child1: parent}
+[22/5/2025] [GOOD] [PrefixSum] [Hashtable] 560. Subarray Sum Equals K - Using Hashtable -> count += prefix_sum[sum -k]
+[23/5/2025] [GOOD] [PrefixSum] [Hashtable] 525. Contiguous Array => ca hai bai deu dung defaultdict pattern: **{current_sum: index/appeared times}**
+[22/5/2025] [String] 6. Zigzag Conversion
+Top favorite questions:
+May 10 2025 [560 prefix sum](./PrefixSum/560.%20Subarray%20Sum%20Equals%20K.py): prefix sum basic
+May 13 2025 [437. Path Sum III](./PrefixSum/437.%20Path%20Sum%20III.py): prefix sum + dfs
+May 13 2025 [547. Number of Provinces]: union find or dfs or bfs
+May 19 2025 [1161.Maxium Level Sum of a Binary Tree]: basic BFS or DFS problems
+[22/05/2025] 235. Lowest Common Ancestor of a Binary Search Tree - parent & ancestor + node left right

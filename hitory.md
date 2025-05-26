@@ -5,9 +5,14 @@
 [20/5/2025] [BST] 98. Validate Binary Search Tree (BST)
 [22/5/2025] [BST] 1644. Lowest Common Ancestor of a Binary Tree II - same with 235 but we need to check is exist
 [22/5/2025] [BST] 1676. Lowest Common Ancestor of a Binary Tree IV
-[22/5/2025] [BST] [GOOD] [Hashtable] 1650. Lowest Common Ancestor of a Binary Tree III - loop circle - the same as linked list technique {root: None, child1: parent}
-[22/5/2025] [GOOD] [PrefixSum] [Hashtable] 560. Subarray Sum Equals K - Using Hashtable -> count += prefix_sum[sum -k]
-[23/5/2025] [GOOD] [PrefixSum] [Hashtable] 525. Contiguous Array => ca hai bai deu dung defaultdict pattern: **{current_sum: index/appeared times}**
+[22/5/2025] [BST] [GOOD] [HashTable] 1650. Lowest Common Ancestor of a Binary Tree III - loop circle - the same as linked list technique {root: None, child1: parent}
+[22/5/2025] [GOOD] [PrefixSum] [HashTable] 560. Subarray Sum Equals K - Using Hashtable -> count += prefix_sum[sum -k]
+                    [Key]: how many ways to remove the prefix sum
+[23/5/2025] [GOOD] [PrefixSum] [HashTable] 525. Contiguous Array => ca hai bai deu dung defaultdict pattern: 
+                    [Key]: **{current_sum: index/appeared times}**
+[26/5/2025] [Good] [PrefixSum] [HashTable] 1248. Count Number of Nice Subarrays
+                    [Key]: # the last appear times of 2 odd index create a subarray that have k odd index in it
+[26/5/2025] [Good] [PrefixSum] [HashTable] 930. Binary Subarrays With Sum
 [22/5/2025] [String] 6. Zigzag Conversion
 Top favorite questions:
 May 10 2025 [560 prefix sum](./PrefixSum/560.%20Subarray%20Sum%20Equals%20K.py): prefix sum basic

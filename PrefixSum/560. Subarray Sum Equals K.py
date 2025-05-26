@@ -1,3 +1,29 @@
+
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        prefix_sums = defaultdict(int)
+        # how do we come up with the assume that at the beginning no select sub array
+        # the first prefix_sums property will be prefix_sums[0] = 1
+        # that means no element is taken
+
+        """
+        The key here is how many ways you can remove the previous prefix sum to get the target number, the "way" itself will count by the prefix_sums dictionary. Why initialize prefix_sums = {0: 1}?
+Because if a subarray starting from the beginning sums to k, then curr_sum - k == 0, and we want that to count as 1 valid subarray.
+
+It takes me 30~45 minutes to solve this problem in O(n^2), and then I spent 2 hours watching this video to really understand the hashmap technique. The key here is how many ways you can remove the previous prefix sum to get the target number, the "way" itself will count by the prefix_sums dictionary. Why initialize prefix_sums = {0: 1}?
+Because if a subarray starting from the beginning sums to k, then curr_sum - k == 0, and we want that to count as 1 valid subarray.
+
+
+        """
+        prefix_sums[0] = 1
+        sum = 0
+        count = 0
+        for i in range(len(nums)):
+            sum += nums[i]
+            count += prefix_sums[sum - k]
+            prefix_sums[sum] += 1
+        print(prefix_sums)
+        return count
 """
 /**
  * @param {number[]} nums

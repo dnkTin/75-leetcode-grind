@@ -23,3 +23,10 @@ BFS is an algorithm for traversing or searching a graph. It traverses in a level
 
 dfs => USING backtrack -> RECURSIVE
 bfs => USING DEQUE
+bfs
+  1. current visit
+  2. visited
+  3. topologi data
+  4. loop the current visit to find another 
+     1. check if 
+the BFS strategy prioritizes the breadth over depth, i.e. it goes wider before it goes deeper.
